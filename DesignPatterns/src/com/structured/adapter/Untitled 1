@@ -1,0 +1,20 @@
+We have an existing object which provides the functionality that client needs.
+but client code can't use this object because it expects an object with different interface.
+
+using adapter design pattern we make this existing object work with client 
+by adapting the object to client's expected interface.
+
+this pattern is also called as wrapper as it wraps existing Object.
+
+3)))))))))))
+Adapter design pattern is one of the structural design pattern
+ and its used so that two unrelated interfaces can work together. 
+ The object that joins these unrelated interface is called an Adapter.
+
+4))))))))))))))))
+
+Some of the adapter design pattern example I could easily find in JDK classes are;
+
+java.util.Arrays#asList()
+java.io.InputStreamReader(InputStream) (returns a Reader)
+java.io.OutputStreamWriter(OutputStream) (returns a Writer)
