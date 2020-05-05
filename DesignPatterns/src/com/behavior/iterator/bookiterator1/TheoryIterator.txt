@@ -1,0 +1,59 @@
+This pattern hides the actual implementation of traversal through the collection. The application programs just use iterator methods for different purposes. Iterator pattern allows accessing the elements of a collection object in a sequential manner without knowledge of its structure. Key points to remember about this interface are:
+
+This pattern is used when you foresee a collection is traversed with different types of criteria.
+The collection object should be accessed and traversed without exposing its data structure.
+New traversal operations should be defined for collection object without changing its interface.
+
+
+*****************************************************************************
+Implementation Considerations:
+*****************************************************************************
+
+1. Detecting change to underlying data structure whiel some code is using an iterator is important to notify to the client because then our iterator may not work correctly.
+
+
+
+2. Having our iterator implementation as inner class makes it easy to access internal collection of aggregate objects.
+
+
+******************************************************************************
+Design Consideration:
+******************************************************************************
+
+1. Always prefer iterator interface so you can change the implementation without affecting client.
+
+2. Iterators have many applications where a collection is not directly used but we still want to give a sequential access to information for example may be for reading lines from file, from network.
+
+******************************************************************************
+
+Example of Iterator:
+
+******************************************************************************
+
+Yup! the iterator classes in java's collection framework are great examples of iterator.
+
+The concrete iterators are typically inner classes in each collection class implementing java.util.Iterator  Interface.
+
+
+
+The java.util.Scanner class is also an example of Iterator pattern.This class supports InputStream as well and allows to Iterate over a stream.
+
+Scanner sc=new Scanner(System.in);
+
+//read an integer from input stream
+
+int i=sc.nextInt();
+
+
+
+The java.xml.stream.XMLEventReader class is also an iterator. This class turns the XML into a stream of event Objects.
+
+
+****************************************************************************
+
+PitFalls:
+
+****************************************************************************
+Access to index  during iteration is not readily like we have in a for loop.
+
+Making modifications to the collection while someone is using an iterator often makes that iterator instance invalid as its state may not be valid.
