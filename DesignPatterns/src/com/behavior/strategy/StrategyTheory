@@ -1,0 +1,13 @@
+Strategy pattern allows us to encapsulate an algorithm in a class. So now
+we can configure our context or main object with an object of this class, 
+to change the algorithm used to perform given operation.
+
+This is really helpful if y ou have many possible variations of an algorithm.
+
+A good indication for applicability of strategy pattern is if
+ we find different algorithms/behaviors in our methods which are elected with conditional
+ statements like if-else or switch-case.
+ 
+ Strategy design patterns are usually implemented in an inheritance hierachy so that we can 
+ choose any one implementation and it will work with our main object/context as the interface
+ same for all implementation
